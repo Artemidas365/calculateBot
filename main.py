@@ -43,9 +43,7 @@ def time_calculator(message):
         now = str(datetime.date.today())
         days, months, years = calculator(date, now)
         dmy = str(days) + ' days, ' + str(months) + ' months and ' + str(years) + ' years'
-        # str(days), 'days', str(months), 'months', str(years), 'years'
         print(dmy)
-        # print(days, 'days', months, 'months', years, 'years')
         indays = in_days(days, months, years)
         insecs = in_seconds(indays)
         inhours = in_hours(indays)
