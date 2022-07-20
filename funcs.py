@@ -1,3 +1,4 @@
+# func input: date1, date
 def calculator(x, y):
     w = y.replace('-', '.')
     yr0 = int(w[:4])
@@ -8,6 +9,7 @@ def calculator(x, y):
     yr1 = int(x[6:10])
     yrs = yr0 - yr1
 
+    # months calculator
     def month(a, b, c):
         if a > b:
             monss = a - b
@@ -17,6 +19,7 @@ def calculator(x, y):
             c -= 1
             return monss, c
 
+    # days calculator
     def day(a, b, c):
         if a > b:
             dayss = a - b
@@ -29,6 +32,7 @@ def calculator(x, y):
     mons, yrs = month(mon0, mon1, yrs)
     days, mons = day(day0, day1, mons)
     return days, mons, yrs
+# output: days, months, years
 
 
 def in_days(a,b,c):

@@ -4,7 +4,7 @@ from config import Token
 from funcs import calculator, in_days, in_seconds, in_hours, in_weeks
 from telebot import types
 
-
+# global variables
 bot = telebot.TeleBot(Token)
 date = None
 indays = None
@@ -14,6 +14,7 @@ inweeks = None
 dmy = None
 
 
+# message handler for command
 @bot.message_handler(commands=['start'])
 def start(message):
     msg = "<b>hello</b>, I'm new bot"
@@ -23,6 +24,7 @@ def start(message):
     bot.send_message(message.chat.id, msg, reply_markup=markup, parse_mode='html')
 
 
+# text messages handler
 @bot.message_handler(content_types=['text'])
 def time_calculator(message):
     global date
